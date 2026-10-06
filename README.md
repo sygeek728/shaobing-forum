@@ -1,11 +1,11 @@
-# FluxDO
+# 烧饼论坛
 
-> 一个真诚、友善、团结、专业的 [Linux.do](https://linux.do/) 第三方客户端
+> [sb.sb 烧饼论坛](https://sb.sb/) 的跨平台第三方客户端
 
 [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/ldxfd)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-26A5E4?logo=telegram&logoColor=white)](https://t.me/fluxdo_chat)
 
-FluxDO 是为 [Linux.do](https://linux.do/) 社区打造的现代化移动和桌面客户端，基于 Flutter 开发，致力于为用户提供流畅、优雅的论坛浏览体验。
+烧饼论坛客户端基于 Flutter 开发，覆盖 Android、iOS、Windows、macOS 和 Linux，提供流畅的 sb.sb 论坛浏览、发帖与互动体验。
 
 ## 下载
 
@@ -22,7 +22,7 @@ FluxDO 是为 [Linux.do](https://linux.do/) 社区打造的现代化移动和桌
    ```
 4. 在源中找到 FluxDO 并安装
 
-![FluxDO 预览](screenshots/preview.png)
+![烧饼论坛预览](screenshots/preview.png)
 
 ## 特性
 
@@ -147,11 +147,11 @@ FluxDO 集成了基于 Rust 的 DOH (DNS over HTTPS) 代理，提供：
 
 详细文档请参考 [core/doh_proxy/README.md](https://github.com/Lingyan000/fluxdo_doh)
 
-## 关于 Linux.do
+## 关于 sb.sb
 
-[Linux.do](https://linux.do/) 是一个真诚、友善、团结、专业的技术社区，汇聚了众多热爱技术、乐于分享的开发者。FluxDO 作为第三方客户端，致力于为社区成员提供更好的移动和桌面端体验。
+[烧饼论坛](https://sb.sb/) 是一个围绕 AI、域名、主机、硬件、交易、分享与技术交流的社区。本项目致力于为社区成员提供更好的移动和桌面端体验。
 
-**注意**：本项目为非官方客户端，与 Linux.do 官方无直接关联。
+**注意**：本项目为非官方客户端，与烧饼论坛官方无直接关联。
 
 ## 问题反馈
 

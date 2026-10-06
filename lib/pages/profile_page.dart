@@ -4,6 +4,7 @@ import 'package:app_icons/app_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user.dart';
+import '../constants.dart';
 import '../providers/discourse_providers.dart';
 import '../providers/selected_topic_provider.dart';
 import '../providers/shortcut_provider.dart';
@@ -324,7 +325,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
     if (username != null && username.isNotEmpty) {
       await WebViewPage.open(
         context, 
-        'https://linux.do/u/$username/preferences/account',
+        '${AppConstants.baseUrl}/u/$username/preferences/account',
         title: context.l10n.profile_editProfile,
         injectCss: '''
           .new-user-content-wrapper {

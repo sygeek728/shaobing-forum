@@ -3,6 +3,7 @@ import 'package:app_icons/app_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../l10n/s.dart';
+import '../constants.dart';
 import '../services/auth_session.dart';
 import '../services/cf_challenge_service.dart';
 import '../services/credential_store_service.dart';
@@ -343,7 +344,7 @@ class _LoginPageState extends State<LoginPage>
                           _entry(
                             1,
                             Text(
-                              'LINUX.DO',
+                              '烧饼论坛',
                               textAlign: TextAlign.center,
                               style: theme.textTheme.headlineMedium?.copyWith(
                                 fontWeight: FontWeight.w700,
@@ -428,7 +429,9 @@ class _LoginPageState extends State<LoginPage>
                 : LoginForm(
                     onSubmit: _handleSubmit,
                     onForgotPassword: () =>
-                        _loginWithWebView('https://linux.do/password-reset'),
+                        _loginWithWebView(
+                          '${AppConstants.baseUrl}/password-reset',
+                        ),
                     savedUsername: _savedUsername,
                     savedPassword: _savedPassword,
                   ),
