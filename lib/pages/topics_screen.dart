@@ -13,6 +13,7 @@ import '../providers/preferences_provider.dart';
 import '../providers/selected_topic_provider.dart';
 import '../providers/shortcut_provider.dart';
 import '../providers/discourse_providers.dart';
+import '../constants.dart';
 import '../services/dynamic_content_suspension_service.dart';
 import '../utils/platform_utils.dart';
 import '../utils/blur_config.dart';
@@ -27,6 +28,7 @@ import 'topic_detail_page/topic_detail_page.dart';
 import 'user_profile_page.dart';
 import 'create_topic_page.dart';
 import 'drafts_page.dart';
+import 'webview_page.dart';
 
 /// 话题屏幕
 /// 在手机上显示单栏列表，平板上显示 Master-Detail 双栏
@@ -119,6 +121,12 @@ class _TopicsScreenState extends ConsumerState<TopicsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // sb.sb is not a Discourse installation. Its pages, CSRF tokens, login
+    // and Cap captcha are server-rendered and must run in a browser session.
+    if (Uri.parse(AppConstants.baseUrl).host == 'sb.sb') {
+      return const WebViewPage(url: AppConstants.baseUrl, title: '烧饼论坛');
+    }
+
     final selectedTopic = ref.watch(selectedTopicProvider);
     // 左栏本质是不是"列表"（信息流）——决定给窄栏还是对半分
     _masterIsListLike = !selectedTopic.isStacked;
